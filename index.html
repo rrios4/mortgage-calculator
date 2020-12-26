@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="script.js"></script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="page-title">
+                <h1>Mortgage Calculator</h1>
+            </div>
+            <div class="mortgage-info" id="mortgageInfo">
+                <div class="mortgage-info" id="mortgageForm">
+                    <form name="myForm"  method="get">
+                        <label for="borrowers-name">Borrower's Name:</label><br>
+                        <input type="text" id="borrowersName" name="borrowers-name"><br>
+                        <label for="account-number">Account Number:</label><br>
+                        <input type="number" id="accountNumber" name="account-number"><br>
+                        <label for="loan-amount">Loan Amount:</label><br>
+                        <input type="number" id="loanAmount" name="loan-amount"><br>
+                        <label for="down-payment">Down Payment:</label><br>
+                        <input type="number" id="downPayment" name="downPayment"><br>
+                        <label for="term">Number of Months:</label><br>
+                        <input type="number" id="term" name="term"><br>
+                        <label for="interest-rate">Interest Rate:</label><br>
+                        <input type="number" id="interestRate" name="interestRate" min="1" max="100"><br><br>
+                        <input type="button" value="Calculate" onclick="calculate() + validateForm()">
+                    </form>
+                </div>
+                <div class="mortgage-info" id="mortgageResults">
+                    <h1>Mortgage Information</h1>
+                    <h3>Account #:</h3>
+                    <p id="displayAccount"></p>
+                    <h3>Borrower's Name:</h3>
+                    <p id="displayBorrower"></p>
+                    <h3>Total Price of House:</h3>
+                    <p id="displayTotal">$</p>
+                    <h3>Monthly Payments:</h3>
+                    <p id="displayPayments">$</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
